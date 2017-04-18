@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<style>
+li {
+  margin-top: .2em;
+}
+#panel {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  user-select: none;
+  background-color: antiquewhite;
+  opacity: 0.8;
+  padding: 4px;
+}
+.arabic {
+  font-family: 'Arabic Typesetting', 'Al Bayan';
+}
+.arabic1 {
+  font-family: 'Traditional Arabic', 'Decotype Naskh';
+}
+.arabic2 {
+  font-family: 'Simplified Arabic', 'Baghdad';
+}
+.arabic3 {
+  font-family: Aldhabi, 'Geeza Pro';
+}
+.arabic4 {
+  font-family: 'Urdu Typesetting', Damascus;
+}
+.bengali {
+  font-family: 'Nirmala UI', 'Bangla MN';
+}
+.bengali1 {
+  font-family: Vrinda, 'Bangla Sangam MN';
+}
+.devanagari {
+  font-family: 'Nirmala UI', 'Devanagari MT';
+}
+.kannada {
+  font-family: 'Nirmala UI', 'Kannada MN'
+}
+.khmer {
+  font-family: 'Khmer UI', 'Khmer MN';
+}
+.khmer1 {
+  font-family: MoolBoran, 'Khmer Sangam MN';
+}
+.lao {
+  font-family: 'Lao UI', 'Lao MN';
+}
+.lao1 {
+  font-family: Dokchampa, 'Lao Sangam MN'
+}
+.malayalam {
+  font-family: 'Nirmala UI', 'Malayalam MN';
+}
+.myanmar {
+  font-family: 'Myanmar Text', 'Myanmar MN';
+}
+.new-tai-lue {
+  font-family: 'Microsoft New Tai Lue';
+}
+.oriya {
+  font-family: 'Nirmala UI', 'Oriya MN';
+}
+.oriya1 {
+  font-family: Kalinga, 'Oriya Sangam MN';
+}
+.sinhala {
+  font-family: 'Nirmala UI', 'Sinhala MN';
+}
+.syriac {
+  font-family: 'Estrangela Edessa';
+}
+.tamil {
+  font-family: 'Nirmala UI', 'Tamil MN';
+}
+.tamil1 {
+  font-family: Latha, 'Tamil Sangam MN';
+}
+.telugu {
+  font-family: 'Nirmala UI', 'Telugu MN';
+}
+.thaana {
+  font-family: 'MV Boli';
+}
+.thai {
+  font-family : 'Leelawadee UI';
+}
+.thai1 {
+  font-family : 'Microsoft Sans Serif';
+}
+.tibetan {
+  font-family: 'Microsoft Himalaya', Kailasa, Kokonor;
+}
+</style>
+<body>
+<div id="panel">
+  <span style="display: inline-block; vertical-align: top;">
+    <input id="overline" type="checkbox" onchange="apply()">
+    <label for="overline">Overline</label>
+    <br>
+    <input id="underline" type="checkbox" onchange="apply()">
+    <label for="underline">Underline</label>
+    <br>
+    <input id="posunder" type="checkbox" onchange="apply()">
+    <label for="posunder">Position: under</label>
+    <br>
+    <input id="skipink" type="checkbox" onchange="apply()">
+    <label for="skipink">Skip ink</label>
+    <br>
+    <br>
+    <a href="http://r12a.github.io/scripts/fontlist/">r12a fontlist</a>
+  </span>
+  <select id="size" size="10" onchange="apply()">
+    <option selected>16px</option>
+    <option>24px</option>
+    <option>32px</option>
+  </select>
+</div>
+<ol id="list">
+  <li style="font-family: Arial">Py今日は Arial</li>
+  <li style="font-family: 'Times New Roman'">Py今日は Times</li>
+  <li style="font-family: 'MS Gothic'">Py今日は MS Gothic</li>
+  <li style="font-family: Meiryo">Py今日は Meiryo</li>
+  <li style="font-family: 'Yu Gothic', YuGothic">Py今日は Yu Gothic</li>
+  <li style="font-family: 'Noto Sans CJK JP'">Py今日は Noto Sans CJK JP</li>
+  <li class="arabic">يولد جميع الناس أحرارًا متساوين في الكرامة والحقوق. وقد وهبوا عقلاً وضميرًا وعليهم أن يعامل بعضهم بعضًا بروح الإخاء.</li>
+  <li class="arabic1">يولد جميع الناس أحرارًا متساوين في الكرامة والحقوق. وقد وهبوا عقلاً وضميرًا وعليهم أن يعامل بعضهم بعضًا بروح الإخاء.</li>
+  <li class="arabic2">يولد جميع الناس أحرارًا متساوين في الكرامة والحقوق. وقد وهبوا عقلاً وضميرًا وعليهم أن يعامل بعضهم بعضًا بروح الإخاء.</li>
+  <li class="arabic3">يولد جميع الناس أحرارًا متساوين في الكرامة والحقوق. وقد وهبوا عقلاً وضميرًا وعليهم أن يعامل بعضهم بعضًا بروح الإخاء.</li>
+  <li class="arabic4">يولد جميع الناس أحرارًا متساوين في الكرامة والحقوق. وقد وهبوا عقلاً وضميرًا وعليهم أن يعامل بعضهم بعضًا بروح الإخاء.</li>
+  <li class="bengali">সমস্ত মানুষ স্বাধীনভাবে সমান মর্যাদা এবং অধিকার নিয়ে জন্মগ্রহণ করে। তাঁদের বিবেক এবং বুদ্ধি আছে ; সুতরাং সকলেরই একে অপরের প্রতি ভ্রাতৃত্বসুলভ মনোভাব নিয়ে আচরণ করা উচিত্‍।</li>
+  <li class="bengali1">সমস্ত মানুষ স্বাধীনভাবে সমান মর্যাদা এবং অধিকার নিয়ে জন্মগ্রহণ করে। তাঁদের বিবেক এবং বুদ্ধি আছে ; সুতরাং সকলেরই একে অপরের প্রতি ভ্রাতৃত্বসুলভ মনোভাব নিয়ে আচরণ করা উচিত্‍।</li>
+  <li class="devanagari">सभी मनुष्यों को गौरव और अधिकारों के मामले में जन्मजात स्वतन्त्रता और समानता प्राप्त है । उन्हें बुद्घि और अन्तरात्मा की देन प्राप्त है और परस्पर उन्हें भाईचारे के भाव से बर्ताव करना चाहिए ।</li>
+  <li class="kannada">ಎಲ್ಲಾ ಮಾನವರೂ ಸ್ವತಂತ್ರರಾಗಿಯೇ ಜನಿಸಿದ್ಧಾರೆ. ಹಾಗೂ ಘನತೆ ಮತ್ತು ಹಕ್ಕುಗಳಲ್ಲಿ ಸಮಾನರಾಗಿದ್ದಾರೆ. ವಿವೇಕ ಮತ್ತು ಅಂತಃಕರಣ ಗಳನ್ನು ಪದೆದವರಾದ್ದ ರಿಂದ ಅವರು ಪರಸ್ಪರ ಸಹೋದರ ಭಾವದಿಂದ ವರ್ತಿಸಚೀಕು.</li>
+  <li class="khmer">មនុស្សទាំងអស់ កើតមកមានសេរីភាព និងសមភាព ក្នុងផ្នែកសេចក្ដីថ្លៃថ្នូរនិងសិទ្ធិ។ មនុស្ស មានវិចារណញ្ញាណនិងសតិសម្បជញ្ញៈជាប់ពីកំណើត ហើយគប្បីប្រព្រឹត្ដចំពោះគ្នាទៅវិញទៅមក ក្នុង ស្មារតីភាតរភាពជាបងប្អូន។</li>
+  <li class="khmer1">មនុស្សទាំងអស់ កើតមកមានសេរីភាព និងសមភាព ក្នុងផ្នែកសេចក្ដីថ្លៃថ្នូរនិងសិទ្ធិ។ មនុស្ស មានវិចារណញ្ញាណនិងសតិសម្បជញ្ញៈជាប់ពីកំណើត ហើយគប្បីប្រព្រឹត្ដចំពោះគ្នាទៅវិញទៅមក ក្នុង ស្មារតីភាតរភាពជាបងប្អូន។</li>
+  <li class="lao">ມະນຸດເກີດມາມີສິດເສລີພາບ ແລະ ສະເໝີໜ້າກັນໃນທາງກຽດຕິສັກ ແລະ ທາງສິດດ້ວຍມະນຸດມີສະຕິສຳປັດຊັນຍະ(ຮູ້ດີຮູ້ຊົ່ວ)ແລະມີມະໂນທຳຈື່ງຕ້ອງປະພຶດຕົນຕໍ່ກັນໃນທາງພີ່ນ້ອງ.</li>
+  <li class="lao1">ມະນຸດເກີດມາມີສິດເສລີພາບ ແລະ ສະເໝີໜ້າກັນໃນທາງກຽດຕິສັກ ແລະ ທາງສິດດ້ວຍມະນຸດມີສະຕິສຳປັດຊັນຍະ(ຮູ້ດີຮູ້ຊົ່ວ)ແລະມີມະໂນທຳຈື່ງຕ້ອງປະພຶດຕົນຕໍ່ກັນໃນທາງພີ່ນ້ອງ.</li>
+  <li class="malayalam">മനുഷ്യരെല്ലാവരും തുല്യാവകാശങ്ങളോടും അന്തസ്സോടും സ്വാതന്ത്ര്യത്തോടുംകൂടി ജനിച്ചിട്ടുള്ളവരാണ്‌. അന്യോന്യം ഭ്രാതൃഭാവത്തോടെ പെരുമാറുവാനാണ്‌ മനുഷ്യന്നു വിവേകബുദ്ധിയും മനസ്സാക്ഷിയും സിദ്ധമായിരിക്കുന്നത്‌.</li>
+  <li class="myanmar">လူတိုင်းသည် တူညီ လွတ်လပ်သော ဂုဏ်သိက္ခါဖြင့် လည်းကောင်း၊ တူညီလွတ်လပ်သော အခွင့်အရေးများဖြင့် လည်းကောင်း၊ မွေးဖွားလာသူများ ဖြစ်သည်။ ထိုသူတို့၌ ပိုင်းခြား ဝေဖန်တတ်သော ဉာဏ်နှင့် ကျင့်ဝတ် သိတတ်သော စိတ်တို့ရှိကြ၍ ထိုသူတို့သည် အချင်းချင်း မေတ္တာထား၍ ဆက်ဆံကျင့်သုံးသင့်၏။</li>
+  <li class="new-tai-lue">ᦂᦵᧈ ᦂᦵᦲ ᦂᦵᧀ ᦂᦵᧀᧉ ᦁᦶᦗ xx</li>
+  <li class="oriya">ସବୁ ମନୁଷା ଜନ୍ମୁକାଳରୁ ସ୍ଵଧନ, ଷେମାନଙ୍କର</li>
+  <li class="oriya1">ସବୁ ମନୁଷା ଜନ୍ମୁକାଳରୁ ସ୍ଵଧନ, ଷେମାନଙ୍କର</li>
+  <li class="sinhala">කඛගඝඃ ඣෛණී ඹ්යඐෂ ඖකෝර</li>
+  <li class="syriac">ܟܠ ܒܪܢܫܐ ܒܪܝܠܗ ܚܐܪܐ ܘܒܪܒܪ ܓܘ ܐܝܩܪܐ ܘܙܕܩܐ. ܘܦܝܫܝܠܗ ܝܗܒܐ ܗܘܢܐ ܘܐܢܝܬ. ܒܘܕ ܕܐܗܐ ܓܫܩܬܝ ܥܠ ܐܚܪܢܐ ܓܪܓ ܗܘܝܐ ܒܚܕ ܪܘܚܐ ܕܐܚܢܘܬܐ.</li>
+  <li class="tamil">மனிதப் பிறிவியினர் சகலரும் சுதந்திரமாகவே பிறக்கின்றனர் ; அவர்கள் மதிப்பிலும், உரிமைகளிலும் சமமானவர்கள், அவர்கள் நியாயத்தையும் மனச்சாட்சியையும் இயற்பண்பாகப் பெற்றவர்கள். அவர்கள் ஒருவருடனொருவர் சகோதர உணர்வுப் பாங்கில் நடந்துகொள்ளல் வேண்டும்.</li>
+  <li class="tamil1">மனிதப் பிறிவியினர் சகலரும் சுதந்திரமாகவே பிறக்கின்றனர் ; அவர்கள் மதிப்பிலும், உரிமைகளிலும் சமமானவர்கள், அவர்கள் நியாயத்தையும் மனச்சாட்சியையும் இயற்பண்பாகப் பெற்றவர்கள். அவர்கள் ஒருவருடனொருவர் சகோதர உணர்வுப் பாங்கில் நடந்துகொள்ளல் வேண்டும்.</li>
+  <li class="telugu">భాషా శాస్త్రకారులు తెలుగును ద్రావిడ భాషా వర్గమునకు చెందినదిగా వర్గీకరించినారు</li>
+  <li class="thaana">ހުރިހާ އިންސާނުންވެސް ދުނިޔެއަށް އުފަންވަނީ، މިނިވަންކަމުގައި، ހަމަހަމަ ޙައްޤުތަކަކާއެކު، ހަމަހަމަ ދަރަޖައެއްގައި ކަމޭހިތެވިގެންވާ ބައެއްގެ ގޮތުގައެވެ. ހެޔޮ ވިސްނުމާއި، ހެޔޮބުއްދީގެ ބާރު އެމީހުންނަށް ލިބިގެންވެއެވެ. އަދި އެކަކު އަނެކަކާމެދު އެމީހުން މުޢާމަލާތް ކުރަންވާނީ، އުޚުއްވަތްތެރިކަމުގެ ރޫޙެއްގައެވެ.</li>
+  <li class="thai">มนุษย์ทั้งหลายเกิดมามีอิสระและเสมอภาคกันในเกียรติศักด[เกียรติศักดิ์]และสิทธิ ต่างมีเหตุผลและมโนธรรม และควรปฏิบัติต่อกันด้วยเจตนารมณ์แห่งภราดรภาพ</li>
+  <li class="thai1">มนุษย์ทั้งหลายเกิดมามีอิสระและเสมอภาคกันในเกียรติศักด[เกียรติศักดิ์]และสิทธิ ต่างมีเหตุผลและมโนธรรม และควรปฏิบัติต่อกันด้วยเจตนารมณ์แห่งภราดรภาพ</li>
+  <li class="tibetan">འགྲོ་བ་མིའི་རིགས་རྒྱུད་ཡོངས་ལ་སྐྱེས་ཙམ་ཉིད་ནས་ཆེ་མཐོངས་དང༌། ཐོབ་ཐངགི་རང་དབང་འདྲ་མཉམ་དུ་ཡོད་ལ། ཁོང་ཚོར་རང་བྱུང་གི་བློ་རྩལ་དང་བསམ་ཚུལ་བཟང་པོ་འདོན་པའི་འོས་བབས་ཀྱང་ཡོད། དེ་བཞིན་ཕན་ཚུན་གཅིག་གིས་གཅིག་ལ་བུ་སྤུན་གྱི་འདུ་ཤེས་འཛིན་པའི་བྱ་སྤྱོད་ཀྱང་ལག་ལེན་བསྟར་དགོས་པ་ཡིན༎</li>
+</ol>
+</body>
+<script>
+function apply() {
+  let forceRelayout = false;
+  let style = list.style;
+  style.fontSize = size.value;
+  let decorations = [];
+  if (underline.checked)
+    decorations.push('underline');
+  if (overline.checked)
+    decorations.push('overline');
+  style.textUnderlinePosition = posunder.checked ? 'under' : '';
+  if ('textDecorationSkip' in style)
+    style.textDecorationSkip = skipink.checked ? 'ink' : '';
+
+  // text-underline-position does not update dynamically in Chrome,
+  // so toggle underline to force repaint.
+  style.textDecoration = '';
+  document.body.offsetTop;
+  style.textDecoration = decorations.join(' ');
+}
+
+apply();
+</script>
